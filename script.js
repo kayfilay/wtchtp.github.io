@@ -6,50 +6,50 @@ const unmuteBtn = document.getElementById("unmute-btn");
 const watchThis = document.querySelector("#watch-this");
 
 // Loader: wait for all images AND video to load
-window.addEventListener("DOMContentLoaded", () => {
-  const loader = document.getElementById("loader");
+// window.addEventListener("DOMContentLoaded", () => {
+//   const loader = document.getElementById("loader");
 
-  // Collect all images
-  const images = Array.from(document.images);
-  const video = document.getElementById("video1");
+//   // Collect all images
+//   const images = Array.from(document.images);
+//   const video = document.getElementById("video1");
 
-  let loadedCount = 0;
-  const totalCount = images.length + (video ? 1 : 0);
+//   let loadedCount = 0;
+//   const totalCount = images.length + (video ? 1 : 0);
 
-  function checkAllLoaded() {
-    loadedCount++;
-    if (loadedCount >= totalCount) {
-      // Fade out loader
-      if (loader) {
-        loader.style.opacity = "1";
-        loader.style.transition = "opacity 0.5s ease";
-        requestAnimationFrame(() => {
-          loader.style.opacity = "0";
-          setTimeout(() => loader.style.display = "none", 500);
-        });
-      }
-    }
-  }
+//   function checkAllLoaded() {
+//     loadedCount++;
+//     if (loadedCount >= totalCount) {
+//       // Fade out loader
+//       if (loader) {
+//         loader.style.opacity = "1";
+//         loader.style.transition = "opacity 0.5s ease";
+//         requestAnimationFrame(() => {
+//           loader.style.opacity = "0";
+//           setTimeout(() => loader.style.display = "none", 500);
+//         });
+//       }
+//     }
+//   }
 
-  // Track image loading
-  images.forEach(img => {
-    if (img.complete) {
-      checkAllLoaded();
-    } else {
-      img.addEventListener("load", checkAllLoaded);
-      img.addEventListener("error", checkAllLoaded);
-    }
-  });
+//   // Track image loading
+//   images.forEach(img => {
+//     if (img.complete) {
+//       checkAllLoaded();
+//     } else {
+//       img.addEventListener("load", checkAllLoaded);
+//       img.addEventListener("error", checkAllLoaded);
+//     }
+//   });
 
-  // Track video loading (when metadata + enough data is loaded)
-  if (video) {
-    if (video.readyState >= 3) {
-      checkAllLoaded();
-    } else {
-      video.addEventListener("canplaythrough", checkAllLoaded, { once: true });
-    }
-  }
-});
+//   // Track video loading (when metadata + enough data is loaded)
+//   if (video) {
+//     if (video.readyState >= 3) {
+//       checkAllLoaded();
+//     } else {
+//       video.addEventListener("canplaythrough", checkAllLoaded, { once: true });
+//     }
+//   }
+// });
 
 
 // Toggle Play/Pause
