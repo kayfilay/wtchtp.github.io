@@ -1,0 +1,554 @@
+/* Base styles (mobile-first) */
+
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column; /* stack child divs vertically */
+  align-items: center; /* center all child divs */
+  justify-content: flex-start;
+  min-width: 320px; /* ✅ lower bound */
+  max-width: 480px; /* ✅ upper bound */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+#gifone {
+  min-height: 91px;
+  background-image: url(img/1stgif.gif);
+}
+
+#simoneFalling {
+  min-width: 100%;
+  min-height: 53%;
+  background-image: url(img/simone-falling.png);
+}
+
+#sky1 {
+  min-height: 1060px;
+  background-image: url(img/sky.png);
+  background-size: auto;
+}
+
+p {
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  font-family: "Instrument Serif", serif;
+  letter-spacing: -2.1px;
+}
+
+#title1 {
+  white-space: initial;
+  word-wrap: break-word;
+  font-size: 61px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1;
+  color: white;
+  text-shadow: #0080fe 2px 2px 0px;
+}
+
+span.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+
+#bodycopy {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  width: 313px;
+  top: 1103px;
+  font-size: 16.3pt;
+  text-align: left;
+  padding-left: 7px;
+  line-height: 1.1;
+}
+
+#giftwo {
+  min-height: 100px;
+  background-image: url(img/2ndgif.gif);
+}
+
+#title2 {
+  z-index: 1;
+  font-size: 56px;
+  color: white;
+  padding: 8%;
+  letter-spacing: 1;
+  line-height: 0.86;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+#gifthree {
+  min-height: 95px;
+  background-image: url(img/3rdgif.gif);
+}
+
+#sticker-portrait {
+  background-image: url(img/sticker-portrait.png);
+}
+
+#orange-box {
+  background-color: #ff6600;
+}
+
+#willYou {
+  margin-top: 20px;
+  width: 75%;
+  height: 107px;
+  background-size: contain;
+  background-image: url(img/willYouBeJoiningMe.svg);
+}
+
+#yes1,
+#yes2 {
+  width: 24%;
+  height: 45px;
+  background-image: url(img/yes.svg);
+  background-size: contain;
+}
+
+#tick1,
+#tick2 {
+  opacity: 0;
+  margin-left: 51%;
+  margin-bottom: 51%;
+  width: 0;
+}
+
+#box1,
+#box2 {
+  width: 29px;
+  height: 30px;
+  background-image: url(img/square.svg);
+  float: right;
+  z-index: 2;
+  margin-top: -2%;
+  margin-left: 2%;
+}
+
+#title3 {
+  font-size: 41px;
+  color: #ffd042;
+  letter-spacing: 1px;
+  letter-spacing: 1;
+  line-height: 1;
+  padding-left: 9%;
+  padding-right: 9%;
+}
+
+#title3 p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+#giffour {
+  min-height: 59px;
+  background-image: url(img/4thgif.gif);
+}
+
+#sky2 {
+  position: relative;
+  min-height: 1967px;
+  background-image: url(img/sky.png);
+  background-size: cover;
+}
+
+#title4,
+#title5 {
+  color: #1ae873;
+  text-shadow: #0080fe 2px 2px 0px;
+  white-space: initial;
+  word-wrap: break-word;
+  font-size: 39px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 0.9;
+  letter-spacing: normal;
+  padding: 0.5em;
+  padding-bottom: 0;
+}
+
+#title5 {
+  padding-top: 0;
+}
+
+#title4 p,
+#title5 p {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+#fallingPrawns {
+  flex: none;
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  width: 100%;
+  background-size: contain;
+  height: 80%;
+  top: 11%;
+  background-image: url(img/falling-prawns.png);
+}
+
+#simonePrawnGif {
+  z-index: 5;
+  margin-top: 7%; /* left: 20px; */
+  width: 88%;
+  height: 22%;
+  background-image: url(img/simone-prawn-gif.gif);
+}
+
+#simonePasta {
+  z-index: 5;
+  margin-top: auto;
+  height: 734px;
+  background-image: url(img/simone-pasta.png);
+}
+
+#giffive {
+  min-height: 72px;
+  background-image: url(img/5thgif.gif);
+}
+
+/* image carousel */
+#picFrame {
+  width: 100%;
+  max-width: 480px;
+  min-width: 320px;
+  min-height: 690px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pic-track {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 100%;
+  will-change: transform;
+}
+
+.pic {
+  flex: 0 0 100%;
+  height: 690px;
+  background-size: cover;
+  background-position: center;
+}
+
+#pic1 {
+  background-image: url(img/asparagus-carousel.png);
+}
+
+#pic2 {
+  background-image: url(img/cake-carousel.png);
+}
+
+#pic3 {
+  background-image: url(img/pasta-carousel.png);
+}
+
+#pic4 {
+  background-image: url(img/cake2-carousel.png);
+}
+/*Pic divs end*/
+
+#gifsix {
+  min-height: 100px;
+  background-image: url(img/6thgif.gif);
+}
+
+#finalCake {
+  min-height: 739px;
+  background-image: url(img/final-cake.png);
+}
+
+/* button */
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8f8f8;
+  font-family: "Arial", sans-serif;
+}
+
+/* Mimic SVG card styling */
+
+.card {
+  z-index: 1;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  min-width: 295px;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    /* white with 80% opacity */ rgba(241, 245, 255, 0.8) 100%
+      /* light blue-gray with 80% opacity */
+  );
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Decorative accent (mimic SVG shapes) */
+.card::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at top left,
+    #3a86ff20 0%,
+    transparent 70%
+  );
+  top: -50%;
+  left: -50%;
+  z-index: 0;
+}
+
+.card h2 {
+  z-index: 1;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.date-input {
+  z-index: 1;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.submit-btn {
+  z-index: 1;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 29px;
+  background: linear-gradient(135deg, #3a86ff, #265cc5);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.07s ease, box-shadow 0.07s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff; /* or #000 if you prefer dark */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Spinner animation */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.flexStyling {
+  width: 100%; /* take full container width */
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* stack content vertically */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Generic section styling */
+.title,
+.video-container {
+  width: 100%; /* take full container width */
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* stack content vertically */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background images */
+.img {
+  background-size: cover; /* scale inside container */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Video responsive */
+video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.video-container {
+  position: relative;
+  height: 69vh;
+}
+
+/* Buttons and overlays scale relative to container */
+#play-btn,
+#pause-btn,
+#mute-btn,
+#unmute-btn,
+#watch-this {
+  position: absolute;
+  min-width: 20%;
+  min-height: 20%;
+  background-size: contain;
+}
+
+#play-btn,
+#watch-this {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#play-btn,
+#pause-btn {
+  height: 12%;
+  background-image: url(img/play.svg);
+}
+
+#play-btn {
+  z-index: 3;
+  margin-top: 3%;
+}
+
+#watch-this {
+  height: 38%;
+  background-image: url(img/watchthis.gif);
+}
+
+#pause-btn {
+  visibility: hidden;
+  background-image: url(img/pause.png);
+}
+
+#mute-btn,
+#unmute-btn {
+  min-height: 8%;
+  top: 10px;
+  width: 8%;
+  left: 0;
+}
+
+#mute-btn {
+  background-image: url(img/unmute.png);
+  z-index: 2;
+}
+
+#unmute-btn {
+  background-image: url(img/mute.png);
+}
+
+#checkbox1,
+#checkbox2 {
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+#checkbox1 {
+  margin-top: 5%;
+}
+
+#checkbox2 {
+  margin-top: 2%;
+}
+
+/* add fixed background for sky on desktop */
+@media screen and (min-width: 768px) {
+  #sky1,
+  #sky2 {
+    background-attachment: fixed;
+  }
+  #simoneFalling {
+    min-width: 100%;
+    min-height: 63%;
+    background-image: url(img/simone-falling.png);
+  }
+  #title1 p {
+    margin-block-start: 0.5em;
+  }
+  #simonePrawnGif {
+    margin-top: 17%;
+  }
+  body {
+    background-image: url(img/sky.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
